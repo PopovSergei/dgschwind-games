@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'jacoco'
 }
 
 repositories {
@@ -8,6 +9,10 @@ repositories {
 
 dependencies {
     testImplementation 'junit:junit:4.13.1'
+}
+
+test {
+    finalizedBy jacocoTestCoverageVerification
 }
 
 group = 'org.douggschwind'
